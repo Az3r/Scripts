@@ -16,8 +16,6 @@ sudo apt-get -y install zsh
 0>/dev/null sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-cp ./.zshrc $HOME/.zshrc
-source ~/.zshrc
 
 # remove nodejs if exists
 sudo apt-get -y remove nodejs
