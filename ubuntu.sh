@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 sudo apt-get update 
 
 # get curl or wget to run our scripts from web
-sudo apt-get -y install curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file
+sudo apt-get -y install curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential
 
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
@@ -29,7 +29,7 @@ sudo apt-get -y install gparted
 sudo apt-get -y install ruby ruby-dev
 sudo apt-get -y install snapd
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-source $NVM_DIR/nvm.sh
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm install --lts
 
 # programmimg
@@ -40,7 +40,7 @@ sudo snap install --classic dotnet-sdk
 sudo apt-get -y install openjdk-8-jdk openjdk-11-jdk
 
 # react-native
-gem install cocoapods
+sudo gem install cocoapods
 npm install -g nodemon typescript expo-cli
 sudo apt-get -y install watchman
 
@@ -65,3 +65,5 @@ npm install @openapitools/openapi-generator-cli -g
 sudo apt-get -y install guake
 
 sudo apt-get update && sudo apt-get upgrade -y
+
+./config.sh

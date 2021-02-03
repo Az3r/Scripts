@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# oh-my-zsh
+chsh -s "$(which zsh)"
+cp ./.zshrc ~/.zshrc
+source ~/.zshrc
+
 # git
 git config --global user.name 'azer'
 git config --global user.email 'azerprojects@gmail.com'
