@@ -1,0 +1,19 @@
+{
+  "diagnostic.displayByAle": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart",
+    "markdown",
+    "css",
+    "typescript",
+    "javascript",
+    "json",
+    "javascriptreact",
+    "typescriptreact",
+    "graphql",
+    "scss"
+  ],
+  "eslint.autoFixOnSave": true,
+  "flutter.UIPath": false,
+  "tsserver.npm": "/home/azer/.nvm/versions/node/v14.15.3/bin/npm",
+  "tsserver.maxTsServerMemory": 2048
+}
