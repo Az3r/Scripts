@@ -85,6 +85,8 @@ export ANDROID_EMULATOR_HOME=$ANDROID_PREFS_ROOT/.android
 export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd
 export GEM_HOME=$HOME/gems
 export DENO_INSTALL=$HOME/.deno
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -115,5 +117,5 @@ path+=$ANDROID_SDK_ROOT/tools/bin
 path+=$ANDROID_SDK_ROOT/platform-tools
 path+=$GEM_HOME/bin
 path+=$DENO_INSTALL/bin
-path+=$HOME/snap/flutter/common/flutter/bin
+path+=/snap/bin
 path+=$HOME/.local/scripts

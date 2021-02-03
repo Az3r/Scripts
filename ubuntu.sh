@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 sudo apt-get update 
 
 # get curl or wget to run our scripts from web
-sudo apt-get -y install curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential
+sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted
 
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
@@ -21,10 +21,6 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 sudo apt-get -y remove nodejs
 sudo apt-get -y autoremove
 
-# disk managers
-sudo apt-get -y install gnome-disk-utility
-sudo apt-get -y install gparted
-
 # package managers
 sudo apt-get -y install ruby ruby-dev
 sudo apt-get -y install snapd
@@ -32,16 +28,19 @@ wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 nvm install --lts
 
+# search tools
+sudo apt-get install -y fd-find fzf
+
 # programmimg
 sudo snap install --classic code
+sudo snap install --classic android-studio
 sudo snap install --classic kotlin 
 sudo snap install --classic flutter
-sudo snap install --classic dotnet-sdk
+sudo snap install dotnet-sdk --channel=lts/stable --classic
 sudo apt-get -y install openjdk-8-jdk openjdk-11-jdk
 
 # react-native
 sudo gem install cocoapods
-npm install -g nodemon typescript expo-cli
 sudo apt-get -y install watchman
 
 # docker
