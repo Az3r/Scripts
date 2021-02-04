@@ -28,10 +28,10 @@ Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 " Coc settings 
-let g:coc_node_path = '/home/azer/.nvm/versions/node/v14.15.3/bin/node'
+let g:coc_node_path = $NODE_PATH
 " Coc extensions
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-flutter-tools',
-      \'coc-docker',
+      \'coc-docker', 'coc-styled-components', 'coc-react-refactor'
       \'coc-yaml', 'coc-xml', 'coc-eslint', 'coc-tslint',
       \'coc-actions', 'coc-markdownlint', 'coc-git', 'coc-sql', 'coc-python',
       \'coc-pairs', 'coc-prettier', 'coc-omnisharp',]
@@ -245,6 +245,19 @@ function! s:show_documentation()
   endif
 endfunction
 
+" Use CTRL-S for selections ranges.
+" Requires 'textDocument/selectionRange' support of language server.
+nmap <silent> <C-s> <Plug>(coc-range-select)
+xmap <silent> <C-s> <Plug>(coc-range-select)
+
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR   :call CocAction('runCommand', 'editor.action.organizeImport')
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin

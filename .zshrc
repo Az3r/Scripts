@@ -3,7 +3,6 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/azer/.oh-my-zsh"
-export NVM_DIR="$HOME/.nvm"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -74,19 +73,9 @@ plugins=(git gitignore npm dotnet web-search
         zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-source $NVM_DIR/nvm.sh
 
 # User configuration
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
-export ANDROID_HOME=$ANDROID_SDK_ROOT
-export ANDROID_PREFS_ROOT=$HOME
-export ANDROID_EMULATOR_HOME=$ANDROID_PREFS_ROOT/.android
-export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd
-export GEM_HOME=$HOME/gems
-export DENO_INSTALL=$HOME/.deno
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -111,11 +100,40 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export NVM_DIR="$HOME/.nvm"
+export GITHUB_TOKEN=e680257ab3b2a6f63656b322f1c460450596ad06
+export GITLAB_TOKEN=MpNnbzVxXcDwxnoUPrki
+
+export WORK=$HOME/work
+# export DOWNLOAD=$ME/download
+# export STEAM=$HOME/Games/steam
+
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+
+# android sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+
+# android emulator
+export ANDROID_PREFS_ROOT=$HOME
+export ANDROID_EMULATOR_HOME=$ANDROID_PREFS_ROOT/.android
+export ANDROID_AVD_HOME=$ANDROID_EMULATOR_HOME/avd
+
+
+# add to path
 path+=$ANDROID_SDK_ROOT/emulator 
 path+=$ANDROID_SDK_ROOT/tools
 path+=$ANDROID_SDK_ROOT/tools/bin
 path+=$ANDROID_SDK_ROOT/platform-tools
+
+export GEM_HOME=$HOME/gems
 path+=$GEM_HOME/bin
+
+export DENO_INSTALL=$HOME/.deno
 path+=$DENO_INSTALL/bin
-path+=/snap/bin
+
+path+=$HOME/snap/flutter/common/flutter/bin
+
+
+# my custom scripts
 path+=$HOME/.local/scripts

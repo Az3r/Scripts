@@ -14,6 +14,6 @@
   ],
   "eslint.autoFixOnSave": true,
   "flutter.UIPath": false,
-  "tsserver.npm": "/home/azer/.nvm/versions/node/v14.15.3/bin/npm",
+  "tsserver.disableAutomaticTypeAcquisition": false,
   "tsserver.maxTsServerMemory": 2048
 }
