@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 sudo apt-get update 
 
 # get curl or wget to run our scripts from web
-sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted
+sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip
 
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
@@ -45,7 +45,6 @@ sudo apt-get -y install watchman
 
 # docker
 sudo apt-get -y remove docker docker-engine docker.io containerd runc
-sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository \
@@ -60,9 +59,14 @@ sudo usermod -aG docker $USER
 npm i firebase-tools -g
 npm install @openapitools/openapi-generator-cli -g
 
+# fonts
+sudo apt-get -y install fonts-hack-ttf
+
 # terminal emulator
 sudo apt-get -y install guake
 
 sudo apt-get update && sudo apt-get upgrade -y
 
 ./config.sh
+
+echo 'Done! you can remove this repo now'

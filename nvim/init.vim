@@ -4,7 +4,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'dense-analysis/ale'
 Plug 'tpope/vim-fugitive'
 Plug 'alvan/vim-closetag'
-Plug 'kassio/neoterm'
 Plug 'joshdick/onedark.vim'
 Plug 'haishanh/night-owl.vim'
 Plug 'hzchirs/vim-material'
@@ -17,22 +16,18 @@ Plug 'junegunn/goyo.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'xolox/vim-misc'
-Plug 'sheerun/vim-polyglot'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'liuchengxu/vista.vim'
 call plug#end()
 
 " Coc settings 
 let g:coc_node_path = $NODE_PATH
+call coc#config('tsserver.npm', $NPM_PATH)
+
 " Coc extensions
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-flutter-tools',
-      \'coc-docker', 'coc-styled-components', 'coc-react-refactor'
-      \'coc-yaml', 'coc-xml', 'coc-eslint', 'coc-tslint',
+      \'coc-docker', 'coc-styled-components', 'coc-react-refactor',
+      \'coc-yaml', 'coc-xml', 'coc-eslint', 'coc-tslint', 'coc-explorer',
       \'coc-actions', 'coc-markdownlint', 'coc-git', 'coc-sql', 'coc-python',
       \'coc-pairs', 'coc-prettier', 'coc-omnisharp',]
 
@@ -301,8 +296,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 nmap <space><space> :vsplit<bar>term<CR>
 " Open fuzzy finder
 nmap <space>f :FZF<CR>
-" Open NERDTree
-nmap <expr><space>n g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>" 
+" Project Explorer
+" nmap <expr><space>n g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>" 
+nmap <space>n :CocCommand explorer<CR>
 " Open Docker
 nmap <space>d :Docker
 
@@ -326,10 +322,9 @@ tmap jj <C-\><C-n>
 tmap mm jj<leader>z
 
 " Open flutter commands
-nmap <space>cf :CocList --input=flutter commands<ESC>
+nmap <space>cf :CocList --input=flutter. commands<ESC>
 xmap <leader>.  <Plug>(coc-codeaction-selected)w
 nmap <leader>.  <Plug>(coc-codeaction-selected)w
-" Open docker commands
 
 " Open git section
 nmap <space>g :G<CR>
@@ -348,5 +343,8 @@ nmap <leader>x :qa!<CR>
 " stop insert mode
 imap jj <ESC>
 
+" buffer management
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+:nnoremap <C-P> :buffers<CR>:buffer<Space>
 nmap $ g_
 nmap 0 _
