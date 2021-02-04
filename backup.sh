@@ -1,9 +1,5 @@
 #!/bin/sh
 
-cp ~/.zshrc .zshrc
-cp -r ~/.config/nvim nvim
+cp -v ~/.zshrc ./.zshrc
+cp -vr ~/.config/nvim .
 guake --save-preferences ./guake
-
-git add .
-git commit -m 'update'
-git push

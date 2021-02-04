@@ -87,6 +87,9 @@ export GEM_HOME=$HOME/gems
 export DENO_INSTALL=$HOME/.deno
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export NODE_PATH="$(which node)"
+export NPM_PATH="$(which npm)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
