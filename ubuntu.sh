@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 sudo apt-get update 
 
 # get curl or wget to run our scripts from web
-sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip python3-pip
+sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip python3-pip dosfstools
 
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
