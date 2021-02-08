@@ -8,7 +8,7 @@ export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 sudo apt-get update 
 
 # get curl or wget to run our scripts from web
-sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip
+sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip python3-pip
 
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
@@ -16,6 +16,10 @@ sudo apt-get -y install zsh
 0>/dev/null sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+# vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # remove nodejs if exists
 sudo apt-get -y remove nodejs

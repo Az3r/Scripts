@@ -12,7 +12,7 @@ git config --global mergetool.keepBackup false
 
 # nvim
 mkdir -p $HOME/.config/nvim
-cp -r ./nvim $HOME/.config/nvim
+cp -r ./nvim/. $HOME/.config/nvim/
 
 # guake
 guake --restore-preferences ./guake
