@@ -1,19 +1,17 @@
 {
   "diagnostic.displayByAle": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "dart",
-    "markdown",
-    "css",
-    "typescript",
-    "javascript",
-    "json",
-    "javascriptreact",
-    "typescriptreact",
-    "graphql",
-    "scss"
-  ],
   "eslint.autoFixOnSave": true,
   "flutter.UIPath": false,
   "tsserver.disableAutomaticTypeAcquisition": false,
-  "tsserver.maxTsServerMemory": 2048
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    "html",
+    "json",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact",
+    "dart"
+  ]
 }

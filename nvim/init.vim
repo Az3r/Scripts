@@ -18,6 +18,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'ternjs/tern_for_vim'
+Plug 'mozilla/doctorjs'
+Plug 'preservim/tagbar'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-python/python-syntax'
 call plug#end()
 
 " Coc settings 
@@ -26,9 +32,9 @@ call coc#config('tsserver.npm', $NPM_PATH)
 
 " Coc extensions
 let g:coc_global_extensions = ['coc-json', 'coc-tsserver', 'coc-flutter-tools',
-      \'coc-docker', 'coc-styled-components', 'coc-react-refactor',
+      \'coc-docker', 'coc-styled-components', 'coc-react-refactor', 'coc-html',
       \'coc-yaml', 'coc-xml', 'coc-eslint', 'coc-tslint', 'coc-explorer',
-      \'coc-actions', 'coc-markdownlint', 'coc-git', 'coc-sql', 'coc-python',
+      \'coc-actions', 'coc-markdownlint', 'coc-git', 'coc-sql', 'coc-pyright',
       \'coc-pairs', 'coc-prettier', 'coc-omnisharp',]
 
 " Don't try to be vi compatible
@@ -75,7 +81,7 @@ set timeoutlen=300
 set shortmess+=c
 
 " signcolumn
-set signcolumn=yes:2
+set signcolumn=yes
 
 " Whitespace
 set formatoptions=tcqrn1
@@ -138,8 +144,8 @@ set t_Co=256
 set bg=dark
 set termguicolors
 
-" let g:material_style='oceanic'
-colorscheme vim-material
+let g:material_style='oceanic'
+colorscheme gruvbox
 
 " ALE settings
 let g:ale_sign_column_always = 1
@@ -180,7 +186,7 @@ let g:closetag_filenames = '*.js, *.jsx, *.ts, *.tsx'
 nmap <esc> :noh<CR>
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap <F2> <Plug>(coc-rename)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -205,7 +211,7 @@ endif
 
 " Formatting selected code.
 xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  :Format<CR>
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -307,7 +313,7 @@ vmap <leader>c "+y
 vmap <leader>v "+p
 nmap <leader>v "+p
 
-" Mapping selecting mappings
+" Mappin/g selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
@@ -348,3 +354,6 @@ imap jj <ESC>
 :nnoremap <C-P> :buffers<CR>:buffer<Space>
 nmap $ g_
 nmap 0 _
+
+" tags files
+nmap <F8> :TagbarToggle<CR>

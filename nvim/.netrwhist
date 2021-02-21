@@ -1,3 +1,12 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhistcnt =1
-let g:netrw_dirhist_1='/home/azer/.local/Settings/nvim'
+let g:netrw_dirhist_1='/home/azer/work/demo/electron-react-demo/src'
+let g:netrw_dirhist_0='/home/azer/work/demo/electron-react-demo'
+let g:netrw_dirhist_9='/home/azer/work/demo/electron-react-demo/src'
+let g:netrw_dirhist_8='/home/azer/work/demo/electron-react-demo'
+let g:netrw_dirhist_7='/home/azer/work/demo/electron-react-demo/dist'
+let g:netrw_dirhist_6='/home/azer/work/demo/electron-react-demo'
+let g:netrw_dirhist_5='/home/azer/work/demo/electron-react-demo/src'
+let g:netrw_dirhist_4='/home/azer/work/demo/electron-react-demo/dist'
+let g:netrw_dirhist_3='/home/azer/work/demo/electron-react-demo'
+let g:netrw_dirhist_2='/home/azer/work/demo/electron-react-demo/src'

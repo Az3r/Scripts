@@ -3,6 +3,7 @@ abbreviate-tab-names=false
 compat-delete='delete-sequence'
 display-n=0
 gtk-prefer-dark-theme=true
+gtk-theme-name='Adwaita-dark'
 history-size=1000
 max-tab-name-length=100
 mouse-display=true
@@ -28,7 +29,7 @@ window-valignment=1
 window-width=100
 
 [keybindings/global]
-show-hide='F1'
+show-hide='grave'
 
 [style/background]
 transparency=85
