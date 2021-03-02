@@ -10,6 +10,11 @@ sudo apt-get update
 # get curl or wget to run our scripts from web
 sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip python3-pip dosfstools
 
+# unikey
+sudo add-apt-repository ppa:ubuntu-vn/ppa
+sudo apt-get update
+sudo apt-get install -y ibus-unikey
+
 # zsh and oh-my-zsh
 rm -vrf $HOME/.oh-my-zsh
 sudo apt-get -y install zsh
@@ -40,7 +45,9 @@ sudo snap install --classic code
 sudo snap install --classic android-studio
 sudo snap install --classic kotlin 
 sudo snap install --classic flutter
+sudo snap install --classic postman
 sudo snap install dotnet-sdk --channel=lts/stable --classic
+sudo snap install --classic heroku
 sudo apt-get -y install openjdk-8-jdk openjdk-11-jdk
 
 # react-native
@@ -60,8 +67,9 @@ sudo apt-get -y install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 
 # tools
+npm i vercel
 npm i firebase-tools -g
-npm install @openapitools/openapi-generator-cli -g
+npm i @openapitools/openapi-generator-cli -g
 
 # fonts
 sudo apt-get -y install fonts-hack-ttf
@@ -69,8 +77,14 @@ sudo apt-get -y install fonts-hack-ttf
 # terminal emulator
 sudo apt-get -y install guake
 
+# kvm for android emulator
+sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo adduser `id -un` libvirt
+sudo adduser `id -un` kvm
+
 sudo apt-get update && sudo apt-get upgrade -y
 
 ./config.sh
 
 echo 'Done! you can remove this repo now'
+

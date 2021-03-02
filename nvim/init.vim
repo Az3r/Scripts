@@ -18,12 +18,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'ternjs/tern_for_vim'
-Plug 'mozilla/doctorjs'
-Plug 'preservim/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'vim-python/python-syntax'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'justinmk/vim-sneak'
 call plug#end()
 
 " Coc settings 
@@ -357,3 +357,9 @@ nmap 0 _
 
 " tags files
 nmap <F8> :TagbarToggle<CR>
+
+" Sneak
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
