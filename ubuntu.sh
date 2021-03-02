@@ -4,6 +4,9 @@
 export NVM_DIR=$HOME/.nvm
 export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
 
+# conflict with Windows
+timedatectl set-local-rtc 1 --adjust-system-clock
+
 # update system first
 sudo apt-get update 
 
