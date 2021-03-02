@@ -17,6 +17,9 @@ cp -r ./nvim/. $HOME/.config/nvim/
 # guake
 guake --restore-preferences ./guake
 
+# Microsoft efi boot
+sudo cp -r ./Microsoft /boot/efi/EFI/
+
 # generate ssh for github
 ssh-keygen -t ed25519 -C "azerproject@gmail.com"
 eval "$(ssh-agent -s)"

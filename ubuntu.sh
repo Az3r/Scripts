@@ -11,7 +11,7 @@ sudo apt-get update
 sudo apt-get -y install trash-cli curl wget git xclip firefox neovim apt-transport-https ca-certificates gnupg-agent software-properties-common file build-essential gnome-disk-utility gparted unzip python3-pip dosfstools
 
 # unikey
-sudo add-apt-repository ppa:ubuntu-vn/ppa
+sudo add-apt-repository -y ppa:ubuntu-vn/ppa
 sudo apt-get update
 sudo apt-get install -y ibus-unikey
 
@@ -58,7 +58,7 @@ sudo apt-get -y install watchman
 sudo apt-get -y remove docker docker-engine docker.io containerd runc
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
-sudo add-apt-repository \
+sudo add-apt-repository -y \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable"
@@ -78,7 +78,7 @@ sudo apt-get -y install fonts-hack-ttf
 sudo apt-get -y install guake
 
 # kvm for android emulator
-sudo apt-get install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
+sudo apt-get install -y qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils
 sudo adduser `id -un` libvirt
 sudo adduser `id -un` kvm
 
