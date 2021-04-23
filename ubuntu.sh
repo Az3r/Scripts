@@ -47,7 +47,6 @@ sudo snap install --classic kotlin
 sudo snap install --classic flutter
 sudo snap install --classic postman
 sudo snap install dotnet-sdk --channel=lts/stable --classic
-sudo snap install --classic heroku
 sudo apt-get -y install openjdk-8-jdk openjdk-11-jdk
 
 # react-native
@@ -71,9 +70,10 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # tools
-npm i vercel
-npm i firebase-tools -g
-npm i @openapitools/openapi-generator-cli -g
+npm i vercel -g # deploy webapp
+npm i firebase-tools -g # firebase suck ass!
+npm i @openapitools/openapi-generator-cli -g # API docs
+npm i standard -g # javascript standard style
 
 # fonts
 sudo apt-get -y install fonts-hack-ttf
