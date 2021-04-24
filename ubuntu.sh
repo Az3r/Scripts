@@ -74,7 +74,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 # tools
 npm i -g @openapitools/openapi-generator-cli firebase-tools vercel
-npm i -g prettier eslint prettier-eslint
 
 # fonts
 sudo apt-get -y install fonts-hack-ttf
