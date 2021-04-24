@@ -73,10 +73,8 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 
 # tools
-npm i vercel -g # deploy webapp
-npm i firebase-tools -g # firebase suck ass!
-npm i @openapitools/openapi-generator-cli -g # API docs
-npm i standard -g # javascript standard style
+npm i -g @openapitools/openapi-generator-cli firebase-tools vercel
+npm i -g prettier eslint prettier-eslint
 
 # fonts
 sudo apt-get -y install fonts-hack-ttf
