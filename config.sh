@@ -8,6 +8,7 @@ source ~/.zshrc
 # git
 git config --global user.name 'azer'
 git config --global user.email 'azerprojects@gmail.com'
+git config --global pull.ff only
 git config --global mergetool.keepBackup false
 
 # nvim

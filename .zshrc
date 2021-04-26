@@ -70,14 +70,14 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git gitignore npm dotnet web-search
-        docker nvm
+        docker nvm docker-compose mvn
         zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 source $NVM_DIR/nvm.sh
 
 # User configuration
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk/
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 export ANDROID_PREFS_ROOT=$HOME
