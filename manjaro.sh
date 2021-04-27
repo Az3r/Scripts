@@ -40,6 +40,8 @@ sudo snap install dotnet-sdk --channel=lts/stable --classic
 sudo pacman -S jdk8-openjdk jdk11-openjdk --needed --noconfirm
 yay -S watchman --needed --noconfirm
 
+sudo usermod -a -G libvirt $(whoami)
+
 # configuration
 ./config.sh
 
