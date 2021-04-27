@@ -11,7 +11,7 @@ timedatectl set-local-rtc 1 --adjust-system-clock
 sudo pacman-mirrors --api --protocol https && sudo pacman -Syyu --noconfirm
 
 # utilities
-sudo pacman -S zsh oh-my-zsh base-devel nvm ibus-unikey ttf-hack xclip gnome-disk-utility guake gparted --needed --noconfirm
+sudo pacman -S docker docker-compose virt-install qemu zsh oh-my-zsh base-devel nvm ibus-unikey ttf-hack xclip gnome-disk-utility guake gparted --needed --noconfirm
 
 # install AUR helper
 git clone https://aur.archlinux.org/yay.git
@@ -40,8 +40,6 @@ sudo snap install dotnet-sdk --channel=lts/stable --classic
 sudo pacman -S jdk8-openjdk jdk11-openjdk --needed --noconfirm
 yay -S watchman --needed --noconfirm
 
-# docker, docker-compose
-sudo pacman -S docker docker-compose --needed --noconfirm
-
+# configuration
 ./config.sh
 
